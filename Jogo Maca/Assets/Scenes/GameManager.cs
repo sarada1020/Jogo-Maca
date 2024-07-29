@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -14,17 +15,15 @@ public class GameManager : MonoBehaviour
     public Vector2 ScreenBounds { get => screenBounds; }
     public int Lifes { get => lifes; }
 
-    public void Awake()
+    void Awake()
     {
         instance = this;
-        screenBounds = (Vector2)Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, Camera.main.transform.position.z)) + new Vector3(-1, 1);
+        screenBounds = New Vector3 (point.position.x = -1, point.position.y = 1 + mainCamera.ScreenToWorldPoint(new Vector3 point.position.x = Screen.width, point.position.y = Screen.heigth));
     }
-
     public void LoseLife()
     {
         lifes -= 1;
         ManagerUI.instance.UpdateLifeText();
-
         if (lifes == 0)
         {
             if (score > PlayerPrefs.GetInt("Record", 0))
