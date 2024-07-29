@@ -18,12 +18,13 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         instance = this;
-        screenBounds = New Vector3 (point.position.x = -1, point.position.y = 1 + mainCamera.ScreenToWorldPoint(new Vector3 point.position.x = Screen.width, point.position.y = Screen.heigth));
+        screenBounds = Vector3 screenBounds = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height, 0)) + new Vector3(-1, 1, 0);
     }
     public void LoseLife()
     {
         lifes -= 1;
         ManagerUI.instance.UpdateLifeText();
+
         if (lifes == 0)
         {
             if (score > PlayerPrefs.GetInt("Record", 0))
