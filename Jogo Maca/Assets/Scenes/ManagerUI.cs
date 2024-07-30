@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class ManagerUI : MonoBehaviour
 {
@@ -17,7 +18,15 @@ public class ManagerUI : MonoBehaviour
         instance = this;
     }
 
-    
+    public void UpdateScoreText()
+    {
+        scoreText.text = GameManager.Instance.Score.ToString(); 
+    }
+
+    public void UpdateLifeText()
+    {
+        lifeText.text = GameManager.Instance.Lifes.ToString();
+    }
 
 
 }
