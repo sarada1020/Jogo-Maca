@@ -12,6 +12,12 @@ public class ManagerUI : MonoBehaviour
     [SerializeField] TextMeshProUGUI lifeText;
     [SerializeField] GameObject gameOverPanel;
 
+    private void Awake()
+    {
+        instance = this;
+    }
+
+    
 
 
 }
