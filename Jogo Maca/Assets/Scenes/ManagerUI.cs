@@ -28,5 +28,14 @@ public class ManagerUI : MonoBehaviour
         lifeText.text = GameManager.Instance.Lifes.ToString();
     }
 
+    public void GameOver()
+    {
+        recordText.text = "Record:" + PlayerPrefs.GetInt("Record");
+
+        gameOverPanel.SetActive(true);
+
+    }
+
+   
 
 }
