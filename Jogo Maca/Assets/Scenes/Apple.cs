@@ -8,5 +8,16 @@ public class Apple : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] Rigidbody2D rigidbody2D;
 
+    private void Update()
+    {
+        if (transform.position.y <= -GameManager.Instance.ScreenBounds.y) ;
+        {
+            GameManager.Instance.LoseLife();
+            Destroy(gameObject);
+
+        }
+
+    }
+
 
 }
