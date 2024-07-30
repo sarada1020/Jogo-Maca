@@ -29,10 +29,10 @@ public class SpawnManager : MonoBehaviour
         }
         if (initialTime > 0.8)
         {
-            initialTime -= 0.5f;
+            initialTime -= 0.05f;
         }
         timer = initialTime;
-        Time.deltaTime -= timer;
+        else { timer -= Time.deltaTime; }
     }
 
     // Update is called once per frame
