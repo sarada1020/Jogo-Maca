@@ -1,18 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ManagerUI : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public static ManagerUI instance;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] TextMeshProUGUI scoreText;
+    [SerializeField] TextMeshProUGUI recordText;
+    [SerializeField] TextMeshProUGUI lifeText;
+    [SerializeField] GameObject gameOverPanel;
+
+
+
 }
