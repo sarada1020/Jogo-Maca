@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance { get => instance; }
     public Vector2 ScreenBounds { get => screenBounds; }
     public int Lifes { get => lifes; }
-    public int Score { get => score; set => score = value; }
+    public int Score { get => score; }
 
     void Awake()
     {
