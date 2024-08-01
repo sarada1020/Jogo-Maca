@@ -10,9 +10,9 @@ public class Apple : MonoBehaviour
 
     private void Update()
     {
-        if (transform.position.y <= -GameManager.Instance.ScreenBounds.y) ;
+        if (transform.position.y <= -GameManager.instance.ScreenBounds.y) 
         {
-            GameManager.Instance.LoseLife();
+            GameManager.instance.LoseLife();
             Destroy(gameObject);
 
         }
@@ -21,12 +21,11 @@ public class Apple : MonoBehaviour
 
     }
 
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"));
+        if (collision.CompareTag("Player"))
         {
-            GameManager.Instance.Score += value;
+            GameManager.instance.Score += value;
             ManagerUI.instance.UpdateScoreText();
             Destroy(gameObject);
         }

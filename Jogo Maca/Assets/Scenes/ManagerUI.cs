@@ -21,12 +21,12 @@ public class ManagerUI : MonoBehaviour
 
     public void UpdateScoreText()
     {
-        scoreText.text = GameManager.Instance.Score.ToString(); 
+        scoreText.text = GameManager.instance.Score.ToString(); 
     }
 
     public void UpdateLifeText()
     {
-        lifeText.text = GameManager.Instance.Lifes.ToString();
+        lifeText.text = GameManager.instance.Lifes.ToString();
     }
 
     public void GameOver()

@@ -16,15 +16,15 @@ public class SpawnManager : MonoBehaviour
 
             if (appleType > 90)
             {
-                Instantiate(goldenApple, new Vector3(Random.Range(-GameManager.Instance.ScreenBounds.x, GameManager.Instance.ScreenBounds.x), GameManager.Instance.ScreenBounds.y, 0), Quaternion.identity);
+                Instantiate(goldenApple, new Vector3(Random.Range(-GameManager.instance.ScreenBounds.x, GameManager.instance.ScreenBounds.x), GameManager.instance.ScreenBounds.y, 0), Quaternion.identity);
             }
             else if (appleType > 60)
             {
-                Instantiate(greenApple, new Vector3(Random.Range(-GameManager.Instance.ScreenBounds.x, GameManager.Instance.ScreenBounds.x), GameManager.Instance.ScreenBounds.y, 0), Quaternion.identity);
+                Instantiate(greenApple, new Vector3(Random.Range(-GameManager.instance.ScreenBounds.x, GameManager.instance.ScreenBounds.x), GameManager.instance.ScreenBounds.y, 0), Quaternion.identity);
             }
             else if (appleType < 60)
             {
-                Instantiate(goldenApple, new Vector3(Random.Range(-GameManager.Instance.ScreenBounds.x, GameManager.Instance.ScreenBounds.x), GameManager.Instance.ScreenBounds.y, 0), Quaternion.identity);
+                Instantiate(goldenApple, new Vector3(Random.Range(-GameManager.instance.ScreenBounds.x, GameManager.instance.ScreenBounds.x), GameManager.instance.ScreenBounds.y, 0), Quaternion.identity);
             }
             if (initialTime > 0.8)
             {

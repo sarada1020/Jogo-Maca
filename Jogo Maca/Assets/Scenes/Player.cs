@@ -12,13 +12,13 @@ public class Player : MonoBehaviour
     {
         rigidbody2D.velocity = new Vector2(speed * direction, 0);
 
-        if (-GameManager.Instance.ScreenBounds.x > transform.position.x)
+        if (-GameManager.instance.ScreenBounds.x > transform.position.x)
         {
-            transform.position = new Vector2(-GameManager.Instance.ScreenBounds.x, transform.position.y);
+            transform.position = new Vector2(-GameManager.instance.ScreenBounds.x, transform.position.y);
         }
-        else if (transform.position.x > GameManager.Instance.ScreenBounds.x)
+        else if (transform.position.x > GameManager.instance.ScreenBounds.x)
         {
-            transform.position = new Vector2(GameManager.Instance.ScreenBounds.x, transform.position.y);
+            transform.position = new Vector2(GameManager.instance.ScreenBounds.x, transform.position.y);
         }
     }
     private void Update()
